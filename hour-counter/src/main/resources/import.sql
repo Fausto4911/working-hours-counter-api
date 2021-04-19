@@ -1,10 +1,1 @@
-INSERT INTO employee (name, last_name, branch, department) VALUES('Fausto Emmanuel', 'Torres Diaz', 'Marmot', 'Gerencia');
-INSERT INTO employee (name, last_name, branch, department) VALUES('Nahara Nicole', 'Rosario Liriano', 'Marmot', 'Recursos Humanos');
-INSERT INTO employee (name, last_name, branch, department) VALUES('Pepe Luis', 'Perez Rodriguez', 'Marmot', 'Pintura');
-INSERT INTO employee (name, last_name, branch, department) VALUES('Dona Ruth', 'Perez', 'Marmot', 'Recursos Humanos');
-INSERT INTO employee (name, last_name, branch, department) VALUES('Belkis', 'Patuiei', 'Marmot', 'Recursos Humanos');
-INSERT INTO employee (name, last_name, branch, department) VALUES('Don Fred', 'Piantini', 'Marmot', 'Gerencia');
-INSERT INTO employee (name, last_name, branch, department) VALUES('Ramon', 'Torres', 'Marmot', 'Pintura');
-INSERT INTO employee (name, last_name, branch, department) VALUES('Massiel', 'Torres Diaz', 'Marmot', 'Pintura');
-INSERT INTO employee (name, last_name, branch, department) VALUES('Gertrudis', 'Torres Diaz', 'Marmot', 'Pintura');
-INSERT INTO employee (name, last_name, branch, department) VALUES('Fausto Ramon', 'Torres Diaz', 'Marmot', 'Pintura');
+

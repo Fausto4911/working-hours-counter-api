@@ -5,9 +5,12 @@ import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -36,8 +39,9 @@ public class Employee implements Serializable {
 	@Column(name = "last_name")
 	private String LastName;
 
-	@NotNull
-	private String department;
+	@OneToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name="id")
+	private Department department;
 
 	@Temporal(TemporalType.DATE)
 	@Column(name = "create_at")
@@ -48,7 +52,7 @@ public class Employee implements Serializable {
 
 	}
 
-	public Employee(Long id, String name, String lastName, String department) {
+	public Employee(Long id, String name, String lastName, Department department) {
 		this.id = id;
 		this.name = name;
 		LastName = lastName;
@@ -79,11 +83,11 @@ public class Employee implements Serializable {
 		LastName = lastName;
 	}
 
-	public String getDepartment() {
+	public Department getDepartment() {
 		return department;
 	}
 
-	public void setDepartment(String department) {
+	public void setDepartment(Department department) {
 		this.department = department;
 	}
 
