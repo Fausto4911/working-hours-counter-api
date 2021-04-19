@@ -16,14 +16,14 @@ import org.springframework.format.annotation.DateTimeFormat;
 
 import com.sun.istack.NotNull;
 
-@Entity(name = "employee")
-@Table(name = "employee")
-public class Employee implements Serializable {
+@Entity(name = "department")
+@Table(name = "department")
+public class Department implements Serializable {
 
 	/**
 	 * 
 	 */
-	private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = -2420096602447422515L;
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -32,27 +32,20 @@ public class Employee implements Serializable {
 	@NotNull
 	private String name;
 
-	@NotNull
-	@Column(name = "last_name")
-	private String LastName;
-
-	@NotNull
-	private String department;
-
 	@Temporal(TemporalType.DATE)
 	@Column(name = "create_at")
-	@DateTimeFormat(pattern="dd/MM/yyyy")
+	@DateTimeFormat(pattern = "dd/MM/yyyy")
 	private Date createAt;
 
-	public Employee() {
+	public Department() {
 
 	}
 
-	public Employee(Long id, String name, String lastName, String department) {
+	public Department(Long id, String name, Date createAt) {
+		super();
 		this.id = id;
 		this.name = name;
-		LastName = lastName;
-		this.department = department;
+		this.createAt = createAt;
 	}
 
 	public Long getId() {
@@ -71,22 +64,6 @@ public class Employee implements Serializable {
 		this.name = name;
 	}
 
-	public String getLastName() {
-		return LastName;
-	}
-
-	public void setLastName(String lastName) {
-		LastName = lastName;
-	}
-
-	public String getDepartment() {
-		return department;
-	}
-
-	public void setDepartment(String department) {
-		this.department = department;
-	}
-
 	public Date getCreateAt() {
 		return createAt;
 	}
@@ -97,8 +74,7 @@ public class Employee implements Serializable {
 
 	@Override
 	public String toString() {
-		return "Employee [id=" + id + ", name=" + name + ", LastName=" + LastName + ", department=" + department
-				+ ", createAt=" + createAt + "]";
+		return "Department [id=" + id + ", name=" + name + ", createAt=" + createAt + "]";
 	}
 
 }
