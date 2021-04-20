@@ -10,5 +10,6 @@ public interface EmployeeService {
 	Employee findById(Long id);
 	List<Employee> findAllByDepartment(String department);
 	List<Employee> findAllByBranch(String branch);
+	Employee save(Employee employee);
 
 }
